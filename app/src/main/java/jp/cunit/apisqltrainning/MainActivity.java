@@ -19,7 +19,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private String TAG = "MainActivity";
-    private Button btn_retrofit, btn_room;
+    private Button btn_retrofit, btn_room, btn_download;
 
 
     @Override
@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btn_retrofit = findViewById(R.id.btn_retrofit);
         btn_room = findViewById(R.id.btn_room);
+        btn_download = findViewById(R.id.btn_download);
 
 
         //
@@ -44,6 +45,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent itRoom = new Intent(MainActivity.this, CategoryActivity.class);
+                startActivity(itRoom);
+            }
+        });
+
+        btn_download.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent itRoom = new Intent(MainActivity.this, DownloadManagerActivity.class);
                 startActivity(itRoom);
             }
         });
