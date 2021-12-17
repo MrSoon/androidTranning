@@ -19,7 +19,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private String TAG = "MainActivity";
-    private Button btn_retrofit, btn_room, btn_download;
+    private Button btn_retrofit, btn_room, btn_download, btn_tabviewfrag;
 
 
     @Override
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         btn_retrofit = findViewById(R.id.btn_retrofit);
         btn_room = findViewById(R.id.btn_room);
         btn_download = findViewById(R.id.btn_download);
+        btn_tabviewfrag = findViewById(R.id.btn_tabviewfrag);
 
 
         //
@@ -56,6 +57,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(itRoom);
             }
         });
+
+        btn_tabviewfrag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent itRoom = new Intent(MainActivity.this, TabViewpage2FrapmentActivity.class);
+                startActivity(itRoom);
+            }
+        });
+
 
     }
 }

@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ApiSqlTrainning"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DownloadManagerActivity"/>
+        <activity android:name=".TabViewpage2FrapmentActivity"></activity>
+        <activity android:name=".DownloadManagerActivity" />
         <activity android:name=".RetrofitActivity" />
         <activity android:name=".CategoryActivity" />
         <activity android:name=".MainActivity">
@@ -27,16 +28,16 @@
 
         <receiver
             android:name=".util.DownloadReceiver"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
             </intent-filter>
         </receiver>
+
         <service
             android:name=".service.DownloadManager"
             android:enabled="true"
             android:exported="false" />
-
     </application>
 
 </manifest>
