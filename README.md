@@ -1,3 +1,5 @@
 # androidTranning
-retrofit call api - roomdatabase - tablayout -viewpage-frapment
+retrofit call api
+roomdatabase
+tablayout -viewpage-frapment
 bottomnavigationview
