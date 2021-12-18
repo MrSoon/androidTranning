@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv1"
+        android:background="@color/teal_700"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textAllCaps="true"
+        android:layout_alignParentTop="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"
         android:text="Training SonDo"
-        android:textAlignment="center"
-        android:paddingBottom="20dp"/>
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/btn_retrofit"
+        android:layout_below="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Retrofit"
@@ -24,6 +30,7 @@
         tools:layout_editor_absoluteY="235dp" />
     <Button
         android:id="@+id/btn_room"
+        android:layout_below="@+id/btn_retrofit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="roomdata"
@@ -31,6 +38,7 @@
         tools:layout_editor_absoluteY="235dp" />
     <Button
         android:id="@+id/btn_download"
+        android:layout_below="@+id/btn_room"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="DownloadManager"
@@ -39,11 +47,29 @@
 
     <Button
         android:id="@+id/btn_tabviewfrag"
+        android:layout_below="@+id/btn_download"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TabViewpage2FrapmentActivity"
         tools:layout_editor_absoluteX="158dp"
         tools:layout_editor_absoluteY="235dp" />
+    <Button
+        android:id="@+id/btn_bottomnav"
+        android:layout_below="@+id/btn_tabviewfrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Botom navigation bar"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="235dp" />
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/teal_700"
+        app:itemIconTint="@color/custom_bottom_nav_color"
+        app:itemTextColor="@color/custom_bottom_nav_color"
+        app:menu="@menu/menu_bottom_nav"/>
 
-</LinearLayout>
+</RelativeLayout>

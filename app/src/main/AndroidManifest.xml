@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ApiSqlTrainning"
         android:usesCleartextTraffic="true">
-        <activity android:name=".TabViewpage2FrapmentActivity"></activity>
+        <activity android:name=".BottomNavigationBarActivity"/>
+        <activity android:name=".TabViewpage2FrapmentActivity" />
         <activity android:name=".DownloadManagerActivity" />
         <activity android:name=".RetrofitActivity" />
         <activity android:name=".CategoryActivity" />
